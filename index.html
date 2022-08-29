@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<select id = "ddlMarca" onchange = "LoadMarca()" >  
+    <option> ---Selecciona--- </option>  
+    <option> iIdMarca </option>  
+    <option> sMarca </option>  
+    </select>  
+
+<!-- <h1 class="">Carro</h1>
+<div class="align-content-around">
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-file-earmark-check-fill" style="color: midnightblue"></i></span>
+            @Html.DropDownListFor(model => model.Marcas, new SelectList(string.Empty, "iIdMarca", "sMarca"), "Selecciona una opción", new { @class = "form-control", @id = "ddlMarca" })
+        </div>
+    </div> -->
+
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-globe2" style="color: midnightblue"></i></span>
+            @Html.DropDownListFor(model => model.Submarcas, new SelectList(string.Empty, "iIdSubMarca", "sSubMarca"), "Selecciona una opción", new { @class = "form-control", @id = "ddlSubmarca" })
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-globe2" style="color: midnightblue"></i></span>
+            @Html.DropDownListFor(model => model.Modelos, new SelectList(string.Empty, "iIdModelo", "sModelo"), "Selecciona una opción", new { @class = "form-control", @id = "ddlModelo" })
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi bi-globe2" style="color: midnightblue"></i></span>
+            @Html.DropDownListFor(model => model.Modelos, new SelectList(string.Empty, "iIdDescripcionModelo", "iIdModeloSubmarca"), "Selecciona una opción", new { @class = "form-control", @id = "ddlDescripcionModelo" })
+        </div>
+    </div>
+</div>
